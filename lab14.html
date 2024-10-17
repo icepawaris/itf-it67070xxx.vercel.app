@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="lab14.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile" id="profile" style="background-image: url(https://imgix.bustle.com/uploads/shutterstock/2022/1/10/a336ba51-3cc8-4f5e-935b-9ac7f7b05271-shutterstock-2008512365.jpg?w=400&h=300&fit=crop&crop=faces&q=50&dpr=2);">
+                <p class="notification">1</p>
+            </div>
+            <a id="socialLink" href="https://github.com/yourprofile" target="_blank">
+                <h1 id="username" class="username">Hello Meow</h1>
+            </a>
+            <div class="edit-section">
+                <label for="input">Set Username:</label>
+                <input type="text" placeholder="Name" id="input">
+                <button onclick="setUsername()">SET</button>
+                <br>
+                <label for="profileInput">Url Profile:</label>
+                <input type="text" placeholder="Url-Profile" id="profileInput">
+                <button onclick="setImage()">SET</button>
+            </div>
+        </div>
+
+        <div class="phone-book-section">
+            <h2>Phone Number List</h2>
+            <input type="text" placeholder="Name" id="cellName">
+            <input type="tel" placeholder="Phone Number" id="cellTel">
+            <button onclick="addRow()">ADD</button>
+            <button onclick="saveCSV()">EXPORT</button>
+            <div class="grid-container">
+                <div class="grid-item">No</div>
+                <div class="grid-item">Name</div>
+                <div class="grid-item">Phone Number</div>
+            </div>
+            <table id="phoneBookList"></table>
+        </div>
+    </div>
+</body>
+</html>
